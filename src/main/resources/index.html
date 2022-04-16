@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Random Message</title>
+    </head>
+
+    <body>
+        <div>
+            <span><b>Your Id</b>: <!-- ID --></span><br>
+            <span><b>You are in a chat?</b> <!-- CHATSTATUS --></span>
+            <br><br>
+            <h3>Commands:</h3>
+            <span><b>newChat</b>: To enter on a chat</span><br>
+            <span><b>message</b>: To send a message</span>
+        </div>
+        <div>
+            <!-- CHAT -->
+        </div>
+        <script>
+            function reload() {
+                window.location.reload()
+                setTimeout(reload, 1000)
+            }
+
+            setTimeout(reload, 5000)
+        </script>
+    </body>
+</html>
