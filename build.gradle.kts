@@ -29,6 +29,10 @@ tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "11"
 }
 
+tasks.register("stage") {
+    dependsOn("build", "clean")
+}
+
 application {
     mainClassName = "MainKt"
 }
