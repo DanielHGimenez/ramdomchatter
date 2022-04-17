@@ -13,7 +13,8 @@ import kotlin.text.StringBuilder
 val MINUTES_TO_SESSION_EXPIRE = 30L
 
 fun main(args: Array<String>) {
-    val app = Javalin.create().start(80)
+    val port = System.getenv("PORT") ?: "80"
+    val app = Javalin.create().start(Integer.parseInt(port))
 
     val sessions = HashMap<String, LocalDateTime>()
     val chatQueue = PriorityQueue<String>()
